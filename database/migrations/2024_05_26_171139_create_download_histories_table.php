@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('download_histories', function (Blueprint $table) {
             $table->id();
+            $table->date("date");
+            $table->integer("total_download");
             $table->timestamps();
         });
     }

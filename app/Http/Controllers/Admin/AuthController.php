@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Services\Admin\AuthService;
+use App\Services\AuthService;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\LoginRequest;
 

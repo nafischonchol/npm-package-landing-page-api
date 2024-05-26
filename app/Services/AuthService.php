@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Services\Admin;
+namespace App\Services;
 
 use App\Models\User;
-use App\Models\SendMessage;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Hash;
 
