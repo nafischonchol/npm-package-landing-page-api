@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('vistor_histories', function (Blueprint $table) {
+        Schema::create('visitors', function (Blueprint $table) {
             $table->id();
+            $table->string("user_ip")->nullable();
+            $table->string("country")->nullable();
             $table->timestamps();
         });
     }
@@ -22,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('vistor_histories');
+        Schema::dropIfExists('visitors');
     }
 };

@@ -5,7 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class VistorHistory extends Model
+class Visitor extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'user_ip',
+        'country',
+    ];
 }
