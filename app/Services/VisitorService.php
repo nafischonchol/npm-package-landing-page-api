@@ -45,8 +45,8 @@ class VisitorService
             $data['user_ip'] = $request->ip();
             $cache_key = "visitor-entry:" . $data['user_ip'];
 
-            Cache::forget($cache_key);
-            Cache::remember($cache_key, now()->addMinutes(5), function () use ($data) {
+            // Cache::forget($cache_key);
+            Cache::remember($cache_key, now()->addMinutes(20), function () use ($data) {
                 Visitor::create($data);
             });
             return response()->json(["message" => "Visitor store successfully"]);

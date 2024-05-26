@@ -50,7 +50,7 @@ class DownloadService
         $cache_key = "download:" . $today;
 
         // Cache::forget($cache_key);
-        Cache::remember($cache_key, now()->addMinutes(5), function () {
+        Cache::remember($cache_key, now()->addHours(12), function () {
 
             $end_point = "/downloads/point/last-day/react-api-call";
 
